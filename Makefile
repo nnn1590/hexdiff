@@ -23,7 +23,7 @@ EXE_FILES = $(EXE:%=$(BIN_DIR)/%)
 # Make
 
 $(EXE_FILES): $(OBJ_FILES)
-	$(V)$(CC) $(LDFLAGS) -o $@ $^
+	$(V)$(CC) -o $@ $^ $(LDFLAGS)
 	@echo Build successful!
 
 $(OBJ_FILES): $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
